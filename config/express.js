@@ -10,7 +10,7 @@ module.exports = function(){
 	app.set('views','./views');
 	app.set('view engine', 'jsx');
 	app.engine('jsx', reactViews.createEngine());
-	app.use(express.static(path.join(__dirname, 'public')));
+	app.use(express.static('./public'));
 
 	app.get('/', routes.index);
 
